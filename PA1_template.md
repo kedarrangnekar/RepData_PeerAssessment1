@@ -2,7 +2,7 @@
 title: "Peer Assignment 1 - Template"
 author: "Kedar Rangnekar"
 date: "20 December 2015"
-output: html_document
+output: html_document 
 ---
 
 **Objective** - To load, clean, analyze and represent 2 month (Oct-Nov 2012) fitness data collected at 5 minute intervals for an anonymous individual
@@ -18,6 +18,18 @@ setwd("E:/3_DATA SCIENCE SPECIALISATION/5_Reproducible Research Dec15/Week02/Pee
 
 ```r
 data <- read.csv("./activity.csv", sep = ",",colClasses = c("numeric","Date","numeric"),stringsAsFactors = F, na.strings = c("NA",""))
+```
+
+```
+## Warning in file(file, "rt"): cannot open file './activity.csv': No such
+## file or directory
+```
+
+```
+## Error in file(file, "rt"): cannot open the connection
+```
+
+```r
 data$SrNo <- as.character(seq(1,nrow(data)))
 ```
 
